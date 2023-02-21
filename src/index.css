@@ -11,3 +11,66 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.nav_bar{
+  min-height: 4rem;
+  padding: 0 40px;
+}
+.nav_tabs{
+  position: relative;
+  top: 1.2rem;
+  font-size: 18px;
+}
+.main{
+  position: relative;
+  margin:2rem auto;
+  min-height: calc(100vh - 68px - 78px);
+}
+
+.movies{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.movie{
+  position: relative;
+  width: 24rem;
+  margin-top: 2rem;
+}
+.img_card {
+  height: 48vh;
+  filter: brightness(50%);
+}
+.info{
+  opacity:0;
+}
+.movie:hover{
+  box-shadow: 1px 4px 22px 1px rgb(94, 94, 94);
+  transform: scale(1.2,1);
+  transition: all 0.8s ease;
+}
+.movie:hover .info{
+  opacity: 100;
+ 
+  transition: all 2s  ease-in-out;
+}
+.movie:hover .card_year{
+  opacity: 0;
+  transition: all 2s ease;
+}
+.movie:hover .img_card {
+
+  filter: brightness(100%);
+  transition: all 0.5s ease-in-out;
+}
+.movie_ratio:not(:first-child){
+  margin-left:2rem ;
+}
+.movie_ratio{
+  margin-top: 1rem ;
+}
+
+
+
