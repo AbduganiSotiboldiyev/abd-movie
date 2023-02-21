@@ -9,7 +9,7 @@ export default class Main extends React.Component {
     };
 
     componentDidMount(){
-        fetch('http://www.omdbapi.com/?apikey=8b648976&s=panda')
+        fetch('http://www.omdbapi.com/?apikey=8b648976&s=iron')
         .then(response => response.json())
         .then(data => this.setState({ movies: data.Search,loading: false }))
         
@@ -21,7 +21,7 @@ export default class Main extends React.Component {
       this.setState({ loading: true})
       fetch(`http://www.omdbapi.com/?apikey=8b648976&s=${url}${type !== 'all'?`&type=${type}`:''} `)
         .then(response => response.json())
-        .then(data => this.setState({ movies: data.Search, loading:false}))
+        .then(data =>this.setState({ movies: data.Search, loading:false}))
     }
   render() {
    
